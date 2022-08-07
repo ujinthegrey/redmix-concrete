@@ -1,10 +1,17 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
   max-width: 1000px;
-  margin: auto;
+  margin: 0px auto;
 }
 
 @font-face {
@@ -23,31 +30,108 @@
 }
 body {
   font-family: "Source Sans Pro Light", sans-serif;
+  color: #111;
+  background-color: #f0f0f0;
 }
 
-.navbar__wrap {
-  display: flex;
-  align-items: center;
-  min-height: 70px;
-}
-
-.menu-btn {
-  background-color: transparent;
-  height: 70px;
-  width: 70px;
-  border: none;
+a {
+  text-decoration: none;
+  color: inherit;
   cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.header__body {
+  height: 70px;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 5px;
+}
+.header__logo {
+  background: #e0311e;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.header__logo:hover {
+  opacity: 0.9;
+}
+.header__brand-slogan {
+  flex: 1 1 auto;
+  display: block;
+  margin: 10px;
+}
+.header__brand {
+  display: block;
+  font-family: "Source Sans Pro Semibold", sans-serif;
+  font-size: 24px;
+}
+.header__slogan {
+  display: block;
+  font-family: "Source Sans Pro Light", sans-serif;
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+}
+.menu__body {
+  display: flex;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: end;
   gap: 10px;
+  font-size: 20px;
 }
-.menu-btn:hover {
-  background-color: #333;
+.menu__phone {
+  display: block;
 }
-.menu-btn__line {
+.menu__number {
+  display: block;
+  color: #e0311e;
+}
+.menu__subtitle {
+  display: block;
+}
+.menu__icon {
+  width: 70px;
+  height: 70px;
+}
+.menu__line {
   width: 40px;
-  height: 4px;
-  background-color: #dd8;
+  height: 3px;
+  background-color: #e0311e;
+}
+
+.main__banner {
+  width: 100vw;
+  height: 300px;
+  background: #bcc url("../../img/banner/banner.jpg") no-repeat center;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.footer {
+  background: linear-gradient(#f0f0f0, #e2e3e3);
+}
+
+.footer__container {
+  height: 150px;
+}
+
+.footer__body {
+  display: flex;
+  flex-direction: columns;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

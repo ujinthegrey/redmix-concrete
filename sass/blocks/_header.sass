@@ -1,0 +1,71 @@
+$header-height: 70px
+$header-body-height: 60px
+    
+.header 
+    background-color: $bg-header
+
+    &__body
+        height: $header-height
+        overflow: hidden
+        display: flex
+        align-items: center
+        padding: 5px
+
+    &__logo 
+        background: $primary
+        width: $header-body-height
+        height: $header-body-height
+        border-radius: 50%
+
+        &:hover
+            opacity: .9
+
+    &__brand-slogan
+        flex: 1 1 auto
+        display: block
+        margin: 10px
+
+    &__brand
+        display: block
+        +bold
+        font-size: 24px
+
+    &__slogan 
+        display: block
+        +light
+        font-size: 20px
+
+.menu
+    display: flex
+
+    &__body
+        display: flex
+
+    &__list
+        display: flex
+        align-items: center
+        justify-content: end
+        gap: 10px
+        font-size: 20px
+
+    &__link
+
+    &__phone 
+        display: block
+
+    &__number
+        display: block
+        color: $primary
+
+    &__subtitle
+        display: block
+
+    &__icon
+        width: $header-height
+        height: $header-height
+
+
+    &__line
+       width: 40px
+       height: 3px
+       background-color: $primary
