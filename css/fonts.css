@@ -1,12 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-}
-
 @font-face {
   font-family: "Source Sans Pro Semibold";
   src: url("../fonts/SourceSansPro-SemiBold.eot");
@@ -20,34 +11,4 @@
   src: url("../fonts/SourceSansPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/SourceSansPro-Light.woff") format("woff"), url("../fonts/SourceSansPro-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
-body {
-  font-family: "Source Sans Pro Light", sans-serif;
-}
-
-.navbar__wrap {
-  display: flex;
-  align-items: center;
-  min-height: 70px;
-}
-
-.menu-btn {
-  background-color: transparent;
-  height: 70px;
-  width: 70px;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.menu-btn:hover {
-  background-color: #333;
-}
-.menu-btn__line {
-  width: 40px;
-  height: 4px;
-  background-color: #dd8;
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=fonts.css.map */

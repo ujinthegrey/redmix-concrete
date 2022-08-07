@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Source Sans Pro Semibold';
+    src: url('../fonts/SourceSansPro-SemiBold.eot');
+    src: url('../fonts/SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SourceSansPro-SemiBold.woff') format('woff'),
+    url('../fonts/SourceSansPro-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Source Sans Pro Light';
+    src: url('../fonts/SourceSansPro-Light.eot');
+    src: url('../fonts/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SourceSansPro-Light.woff') format('woff'),
+    url('../fonts/SourceSansPro-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@mixin bold {
+    font-family: 'Source Sans Pro Semibold', sans-serif;
+}
+
+@mixin light {
+    font-family: 'Source Sans Pro Light', sans-serif;
+}
