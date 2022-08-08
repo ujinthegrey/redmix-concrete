@@ -24,15 +24,20 @@
                     <div class="header__menu menu">                    
                         <nav class="menu__body">
                             <ul class="menu__list">
-                                <li><a data-goto=".section_main-1" href="#concrete" class="menu__link">Бетон</a></li>
-                                <li><a data-goto=".section_main-2" href="#asphalt" class="menu__link">Асфальт</a></li>
-                                <li><a data-goto=".section_main-3" href="#silage" class="menu__link">Силос</a></li>
+
                                 <li>
-                                    <div class="menu__phone">
-                                        <a class="menu__number" href="tel: +79879528755">+7 (987) 952-87-55</a>
+                                    <div class="menu__contact">
+                                        <a class="menu__title" href="tel: +79879528755">+7 (987) 952-87-55</a>
                                         <span class="menu__subtitle">будние с 9 до 18</span>
                                     </div>
                                 </li>
+                                <li>
+                                    <div class="menu__contact">
+                                        <a class="menu__title" href="mailTo: redmixsilage@gnail.com">redmixsilage@gnail.com</a>
+                                        <span class="menu__subtitle">email</span>
+                                    </div>
+                                </li>
+                                <li><a class="menu__btn _btn light" target="_blank" href="https://drive.google.com/file/d/1N-T6xI-ZFEAkoaLx5bMnwZ_90XCLOh4q/view?usp=sharing" class="menu__link">Прайс</a></li>
                             </ul>
                         </nav>
                         <div class="menu__icon">
@@ -42,12 +47,21 @@
                         </div>
                     </div>
                 </div>
+                <div class="header__dropdown dropdown">
+                    <nav class="dropdown__body">
+                        <ul class="dropdown__list">
+                            <li><a data-goto=".section_main-1" href="#concrete" class="dropdown__link">Бетон</a></li>
+                            <li><a data-goto=".section_main-2" href="#asphalt" class="dropdown__link">Асфальт</a></li>
+                            <li><a data-goto=".section_main-3" href="#silage" class="dropdown__link">Силос</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
             </div>
         </div>
+
         <main class="main">
-            <div class="main__banner">
-                <img src="./img/banner/banner.jpg" alt="banner">
-            </div>
+            <div class="main__banner"></div>
             <div class="main__container _container">
                 <section class="main__section section-main-1" id="concrete">
                     <h1 class="main__title">Бетон</h1>
@@ -96,6 +110,7 @@
                 </section>
             </div>
         </main>
+
         <footer class="footer">
             <div class="footer__container _container">
                 <div class="footer__body">
@@ -105,7 +120,7 @@
                     <form action="#" class="footer__form">
                         
                     </form>
-
+                    
                     <h3 class="footer__title">
                         Мы в соцсетях
                     </h3>
@@ -118,7 +133,7 @@
                         </ul>
                     </nav>
                 </div>
-            </div>
+                </div>
         </footer>
     </div>
 

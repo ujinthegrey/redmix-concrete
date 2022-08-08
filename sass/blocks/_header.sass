@@ -54,22 +54,65 @@ $header-body-height: 60px
         font-size: 20px
 
     &__link
+        +bold
+        text-align: center
+        line-height: 100%
 
-    &__phone 
+        &:hover
+            opacity: .8
+
+    &__contact
+        +bold
         display: block
 
-    &__number
+    &__title
         display: block
         color: $primary
 
     &__subtitle
         display: block
+        text-align: center
 
     &__icon
         width: $header-height
         height: $header-height
+        cursor: pointer
 
     &__line
+       display: block
        width: 40px
        height: 3px
        background-color: $primary
+
+
+// ---DROPDOWN-------------
+
+.header__dropdown
+    position: fixed
+    width: 100vw
+    left: 0
+    top: -100vh
+    transition: .4s
+    overflow: hidden
+    background-color: $bg-header
+    z-index: 60
+
+    &._active
+        top: $header-height
+        
+.dropdown__body
+    display: block
+    width: 100vw
+
+.dropdown__list 
+    display: flex
+    flex-direction: column
+
+.dropdown__link
+    display: block
+    text-transform: uppercase
+    margin: 10px
+    text-align: center
+    font-size: 20px
+    +bold
+
