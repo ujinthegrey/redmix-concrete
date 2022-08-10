@@ -9,7 +9,15 @@
 }
 
 @mixin bg-silage {
-    background: url('../img/main/silage.png') no-repeat 90%;
+    background: url('../img/main/silage.png') no-repeat right;
     background-size: contain;
+}
+
+@mixin truck {
+    background: #faa url('../img/icons/truck.png') no-repeat center;
+}
+
+@mixin asphalt {
+    background: #faa url('../img/icons/asphalt.png') no-repeat center;
 }
 

@@ -204,11 +204,9 @@ ul {
   content: "";
   left: 0;
   bottom: 0;
-  width: 90%;
+  width: 90px;
   height: 20px;
   background-color: #111;
-  transform: scale(0);
-  transition: scale() 0.4s;
 }
 
 .main__banner {
@@ -224,6 +222,19 @@ ul {
   padding-bottom: 80px;
 }
 
+.main__separator {
+  height: 100px;
+  margin-top: 60px;
+}
+
+.separator-1 {
+  background: #faa url("../img/icons/truck.png") no-repeat center;
+}
+
+.separator-2 {
+  background: #faa url("../img/icons/asphalt.png") no-repeat center;
+}
+
 .section__container {
   padding: 80px 10px 10px;
   display: flex;
@@ -231,20 +242,37 @@ ul {
 }
 
 .main-section-3 {
-  background: url("../img/main/silage.png") no-repeat 90%;
+  background: url("../img/main/silage.png") no-repeat right;
   background-size: contain;
 }
+@media (max-width: 600px) {
+  .main-section-3 {
+    background-image: none;
+  }
+}
+.main-section-3 .section__text {
+  width: 60%;
+}
+@media (max-width: 600px) {
+  .main-section-3 .section__text {
+    width: 100%;
+  }
+}
 
-.section__text {
-  width: 70%;
+.section__title {
+  font-family: "Source Sans Pro Semibold", sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  position: relative;
+  color: #e0311e;
+  padding-left: 30px;
+  border-left: 4px solid #e0311e;
 }
 
 .footer {
-  height: 400px;
   background: #ccc url("https://images.unsplash.com/photo-1579492450119-80542d516179?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat center;
   background-size: cover;
-  overflow: hidden;
-  padding: 40px 10px 200px;
+  padding: 80px 10px 200px;
 }
 
 .footer__body {
@@ -255,6 +283,10 @@ ul {
 
 .footer__title {
   display: block;
+}
+
+.footer__form {
+  margin-bottom: 40px;
 }
 
 .form {
@@ -290,4 +322,12 @@ ul {
 
 .form__button {
   width: 100%;
+}
+
+.menu-footer__link {
+  display: block;
+  margin: 10px;
+  font-family: "Source Sans Pro Semibold", sans-serif;
+  font-size: 18px;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */

@@ -30,3 +30,15 @@ if (anchors.length) {
             })
         }
     }
+
+//----FORM SUBMIT -------------
+const form = document.getElementById('footerForm')
+if (form) {
+    form.addEventListener('submit', function (e) {
+        e.preventDefault()
+        const submitButton = document.querySelector('.form__btn')
+        if (submitButton) {
+            submitButton.innerHTML = 'Форма отправлена!'
+        }
+    })
+}
