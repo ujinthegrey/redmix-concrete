@@ -42,24 +42,28 @@ $header-body-height: 60px
 
 .menu
     display: flex
+    gap: 20px
 
     &__body
         display: flex
 
+        @media screen and (max-width: 800px)
+            display: none
+
     &__list
         display: flex
+        gap: 20px
         align-items: center
         justify-content: flex-end
-        gap: 10px
         font-size: 20px
+
+        &:li
+            margin: 0px 10px
 
     &__link
         +bold
         text-align: center
         line-height: 100%
-
-        &:hover
-            opacity: .8
 
     &__contact
         +bold
@@ -77,12 +81,20 @@ $header-body-height: 60px
         width: $header-height
         height: $header-height
         cursor: pointer
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        &:hover
+        &__line
+            background-color: yellow
 
     &__line
        display: block
-       width: 40px
+       width: 30px
        height: 3px
        background-color: $primary
+       margin: 5px 0px
 
 
 // ---DROPDOWN-------------
@@ -90,29 +102,46 @@ $header-body-height: 60px
 .header__dropdown
     position: fixed
     width: 100vw
-    left: 0
-    top: -100vh
-    transition: .4s
+    top: $header-height
+    left: 100vw
+    perspective: 100px
+    transition: left .4s
     overflow: hidden
     background-color: $bg-header
     z-index: 60
 
     &._active
-        top: $header-height
+        left: 0
+
         
 .dropdown__body
     display: block
+    padding: 0px 15px 30px
     width: 100vw
 
 .dropdown__list 
     display: flex
     flex-direction: column
+    align-items: center
 
 .dropdown__link
-    display: block
     text-transform: uppercase
     margin: 10px
     text-align: center
     font-size: 20px
+    line-height: 40px
     +bold
+    position: relative
+
+    &::affter
+        position: absolute
+        content: ""
+        left: 0
+        bottom: 0
+        width: 90%
+        height: 20px
+        background-color: $text-color
+        transform: scale(0)
+        transition: scale() .4s
+
 
