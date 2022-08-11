@@ -17,7 +17,7 @@ $header-body-height: 60px
         padding: 5px 15px
 
     &__logo 
-        background: $primary
+        +logo
         width: $header-body-height
         height: $header-body-height
         border-radius: 50%
@@ -79,52 +79,7 @@ $header-body-height: 60px
 
     &__subtitle
         display: block
-        text-align: center
-
-/* 
-    &__icon
-        width: $header-height
-        height: $header-height
-        cursor: pointer
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-
-        &:hover
-            opacity: .6
-
-        &._active
-            &__line
-                background-color: yellow
-
-    &__line
-       display: block
-       width: 24px
-       height: 3px
-       background-color: $primary
-       position: relative
-       
-       &::before
-        content: ''
-        position: absolute
-        top: -10px
-        left: 0
-        width: 24px
-        height: 3px
-        background-color: $primary
-
-       &::after
-        content: ''
-        position: absolute
-        top: 10px
-        left: 0
-        width: 24px
-        height: 3px
-        background-color: $primary
-    
- */
-       
+        text-align: center       
 
 // ---DROPDOWN-------------
 

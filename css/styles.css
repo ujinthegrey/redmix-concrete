@@ -108,7 +108,8 @@ ul {
   padding: 5px 15px;
 }
 .header__logo {
-  background: #e0311e;
+  background: #e0311e url("../img/icons/logo.svg") no-repeat center;
+  background-size: 75%;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -178,46 +179,6 @@ ul {
   text-align: center;
 }
 
-/*  &__icon
- *      width: $header-height
- *      height: $header-height
- *      cursor: pointer
- *      display: flex
- *      flex-direction: column
- *      justify-content: center
- *      align-items: center
- *
- *      &:hover
- *          opacity: .6
- *
- *      &._active
- *          &__line
- *              background-color: yellow
- *
- *  &__line
- *     display: block
- *     width: 24px
- *     height: 3px
- *     background-color: $primary
- *     position: relative
- *     &::before
- *      content: ''
- *      position: absolute
- *      top: -10px
- *      left: 0
- *      width: 24px
- *      height: 3px
- *      background-color: $primary
- *
- *     &::after
- *      content: ''
- *      position: absolute
- *      top: 10px
- *      left: 0
- *      width: 24px
- *      height: 3px
- *      background-color: $primary
- * */
 .header__dropdown {
   position: fixed;
   width: 100vw;
@@ -382,7 +343,6 @@ ul {
 
 .footer {
   background: #ccc url("https://images.unsplash.com/photo-1579492450119-80542d516179?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat center;
-  background-size: cover;
 }
 
 .footer__body {
