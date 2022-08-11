@@ -1,0 +1,44 @@
+.menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: $header-body-height;
+    height: $header-body-height;
+    cursor: pointer;
+}
+.menu__icon span,
+.menu__icon::before,
+.menu__icon::after {
+    position: absolute;
+    left: 50%;
+    height: 5%;
+    width: 50%;
+    transition: all .5s ease 0s;
+    background-color: $primary;
+}
+.menu__icon::before,
+.menu__icon::after {
+    content: "";
+}
+.menu__icon::before {
+    top: 30%;
+}
+.menu__icon::after {
+    bottom: 30%;
+}
+.menu__icon span {
+    top: 50%;
+    transform: scale(1) translateY(-50%);
+}
+
+.menu__icon._active span {
+    transform: scale(0) rotate(-90deg);
+}
+.menu__icon._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+}
+.menu__icon._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translateY(50%);
+}

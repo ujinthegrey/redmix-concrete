@@ -1,12 +1,25 @@
-// ---DHEADER  ROPDOWN -------------
+// ---HEADER  DROPDOWN -------------
 const menuIcon = document.querySelector('.menu__icon')
 const dropdown = document.querySelector('.dropdown')
+const main = document.querySelector('.main')
+const footer = document.querySelector('.footer')
 
 if (menuIcon) {
     menuIcon.addEventListener('click', (e) => {
         e.preventDefault()
         menuIcon.classList.toggle('_active')
-        dropdown.classList.toggle('_active')        
+        dropdown.classList.toggle('_active')   
+        
+        if (menuIcon.classList.contains('_active')) {
+            main.addEventListener('click', (e) => {
+                menuIcon.classList.remove('_active')
+                dropdown.classList.remove('_active')        
+            })
+            footer.addEventListener('click', (e) => {
+                menuIcon.classList.remove('_active')
+                dropdown.classList.remove('_active')        
+            })
+        }
     })
 }
 
@@ -25,7 +38,7 @@ if (anchors.length) {
                     blockToScroll.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
-                    }).scrollBy(0, 600)
+                    })
                 }
             })
         }

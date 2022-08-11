@@ -105,7 +105,7 @@ ul {
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 5px;
+  padding: 5px 15px;
 }
 .header__logo {
   background: #e0311e;
@@ -177,26 +177,47 @@ ul {
   display: block;
   text-align: center;
 }
-.menu__icon {
-  width: 70px;
-  height: 70px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.menu__icon__line {
-  background-color: yellow;
-}
-.menu__line {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: #e0311e;
-  margin: 5px 0px;
-}
 
+/*  &__icon
+ *      width: $header-height
+ *      height: $header-height
+ *      cursor: pointer
+ *      display: flex
+ *      flex-direction: column
+ *      justify-content: center
+ *      align-items: center
+ *
+ *      &:hover
+ *          opacity: .6
+ *
+ *      &._active
+ *          &__line
+ *              background-color: yellow
+ *
+ *  &__line
+ *     display: block
+ *     width: 24px
+ *     height: 3px
+ *     background-color: $primary
+ *     position: relative
+ *     &::before
+ *      content: ''
+ *      position: absolute
+ *      top: -10px
+ *      left: 0
+ *      width: 24px
+ *      height: 3px
+ *      background-color: $primary
+ *
+ *     &::after
+ *      content: ''
+ *      position: absolute
+ *      top: 10px
+ *      left: 0
+ *      width: 24px
+ *      height: 3px
+ *      background-color: $primary
+ * */
 .header__dropdown {
   position: fixed;
   width: 100vw;
@@ -244,6 +265,58 @@ ul {
   .dropdown__link {
     font-size: 14px;
   }
+}
+
+.menu__icon {
+  z-index: 5;
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.menu__icon span,
+.menu__icon::before,
+.menu__icon::after {
+  position: absolute;
+  left: 50%;
+  height: 5%;
+  width: 50%;
+  transition: all 0.5s ease 0s;
+  background-color: #e0311e;
+}
+
+.menu__icon::before,
+.menu__icon::after {
+  content: "";
+}
+
+.menu__icon::before {
+  top: 30%;
+}
+
+.menu__icon::after {
+  bottom: 30%;
+}
+
+.menu__icon span {
+  top: 50%;
+  transform: scale(1) translateY(-50%);
+}
+
+.menu__icon._active span {
+  transform: scale(0) rotate(-90deg);
+}
+
+.menu__icon._active::before {
+  top: 50%;
+  transform: rotate(-45deg) translateY(-50%);
+}
+
+.menu__icon._active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translateY(50%);
 }
 
 .main__banner {
@@ -326,7 +399,7 @@ ul {
 }
 
 .footer__form {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .form {
