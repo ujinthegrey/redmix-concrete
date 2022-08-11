@@ -25,7 +25,7 @@ if (anchors.length) {
                     blockToScroll.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
-                    })
+                    }).scrollBy(0, 600)
                 }
             })
         }
@@ -40,5 +40,16 @@ if (form) {
         if (submitButton) {
             submitButton.innerHTML = 'Форма отправлена!'
         }
+        const unsetForm = () => {
+            const formInputs = document.querySelectorAll('.form__input')
+            if (formInputs.length) {
+                for (let formInput of formInputs) {
+                    formInput.value = ''
+                }
+            }
+            submitButton.innerHTML = 'Отправить'
+        }
+
+        setTimeout(unsetForm, 1500)
     })
 }

@@ -1,13 +1,15 @@
 .footer
     +bg-concrete
-    padding: 80px 10px 200px
 
 .footer__container
 
 .footer__body 
+    width: 100%
     display: flex
     flex-direction: column
     align-items: center
+    padding: 80px 15px 120px
+    color: $secondary
 
 .footer__title
     display: block
@@ -18,12 +20,14 @@
 .form
     display: flex
     flex-direction: column
-    width: 320px
+    min-width: 50%
 
 .form__title
     +bold
     font-size: 20px
     text-align: center
+    color: $secondary
+    text-transform: uppercase
     margin-bottom: 15px
 
 .form__item
@@ -31,6 +35,7 @@
     display: flex
     flex-direction: column
     align-items: center
+    color: $secondary
     margin-bottom: 15px
 
 .form__label
@@ -49,9 +54,15 @@
 .menu-footer
 .menu-footer__list
 .menu-footer__item
+    display: flex
+    align-items: center
+    justify-content: center
+    align-items: center
+    &:hover
+        opacity: .6
+
 .menu-footer__link
-    display: block
-    margin: 10px
     +bold
     font-size: 18px
+    line-height: 40px
     text-align: center
