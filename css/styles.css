@@ -356,7 +356,7 @@ ul {
   flex-direction: column;
   align-items: center;
   padding: 40px 15px 120px;
-  color: #633;
+  color: #000;
 }
 
 .footer__title {
@@ -375,14 +375,29 @@ ul {
   flex-direction: column;
   min-width: 50%;
 }
+@media screen and (max-width: 800px) {
+  .form {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .form {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .form {
+    width: 100%;
+  }
+}
 
 .form__title {
   font-family: "Source Sans Pro Semibold", sans-serif;
   font-size: 20px;
   text-align: center;
-  color: #633;
   text-transform: uppercase;
   margin-bottom: 15px;
+  color: #633;
 }
 
 .form__item {
@@ -402,6 +417,7 @@ ul {
 .form__input {
   width: 100%;
   padding: 5px 15px;
+  font-family: "Source Sans Pro Semibold", sans-serif;
 }
 
 .form__button {
